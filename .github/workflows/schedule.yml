@@ -4,6 +4,7 @@ on:
     types: [build-event]
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
 jobs:
   update-gist:
     runs-on: ubuntu-latest
@@ -13,5 +14,5 @@ jobs:
         uses: maxam2017/productive-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: 9842e074b8ee46aef76fd0d493bae0ed
-          TIMEZONE: Asia/Taipei
+          GIST_ID: c26cb36eb118eed7247e804337e7fddb
+          TIMEZONE: Asia/Shanghai
